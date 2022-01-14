@@ -4,6 +4,8 @@
   "description": "Touhou Leaderboard",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index"
   },
@@ -25,5 +27,8 @@
     "http": "^0.0.1-security",
     "path": "^0.12.7",
     "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0"
   }
 }
