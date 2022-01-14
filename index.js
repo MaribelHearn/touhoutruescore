@@ -2,6 +2,7 @@ const http = require("http");
 const path = require("path");
 const url = require("url");
 const fs = require("fs");
+const port = 3000;
 
 const mime = {
     html: "text/html",
@@ -16,6 +17,10 @@ const mime = {
     json: "application/json",
     wasm: "application/wasm"
 };
+
+function hostAddress(req) {
+    return req.headers.host.split(':')[0];
+}
 
 const server = http.createServer(function (req, resp) {
     if (req.method !== "GET") {
