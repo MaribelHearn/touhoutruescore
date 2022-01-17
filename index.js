@@ -1,10 +1,11 @@
 const fastify = require('fastify')({
     logger: true
 });
+const path = require('path');
 const port = 3000;
 
 fastify.register(require('fastify-static'), {
-    root: __dirname
+    root: path.join(__dirname, "public")
 });
 
 async function StartListening() {
