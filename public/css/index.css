@@ -304,3 +304,19 @@ a:link, a:visited {
     -ms-user-select: none;
     user-select: none;
 }
+
+#login-form{
+	margin: 20px auto;
+	padding: 8px 20px;
+	width: fit-content;
+	background-color: rgba(70, 70, 70)
+}
+
+#login-form label{
+	text-align: right;
+}
+
+#form-line{
+	margin: 10px 0;
+	text-align: right;
+}
