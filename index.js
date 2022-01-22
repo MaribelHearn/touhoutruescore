@@ -9,7 +9,12 @@ fastify.register(require('fastify-static'), {
 });
 fastify.register(require('point-of-view'), {
     engine: {handlebars: require('handlebars')},
-    root: './templates'
+    root: './templates',
+    options: {
+        partials: {
+            header: './partials/header.hbs'
+        }
+    }
 });
 
 fastify.register(require('./routes/auth/login'));
