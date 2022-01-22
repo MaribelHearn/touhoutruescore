@@ -1,10 +1,18 @@
 {
     "extends": "eslint:recommended",
+    "plugins": ["jest"],
     "env": {
         "node": true
     },
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
-    }
+    },
+
+    "overrides": [{
+        "files": [ "**/*.test.js" ],
+        "env": {
+            "jest/globals": true
+        }
+    }]
 }
