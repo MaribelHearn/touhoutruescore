@@ -10,11 +10,13 @@ async function run_script(filename) {
 }
 
 async function drop_all_tables() {
-    await db.query('DROP TABLE accounts;');
+    await db.query('DROP TABLE IF EXISTS passwords;');
+    await db.query('DROP TABLE IF EXISTS accounts;');
 }
 
 async function create_all_tables() {
     await run_script('accounts');
+    await run_script('passwords');
 }
 
 module.exports = {
