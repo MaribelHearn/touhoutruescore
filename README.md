@@ -11,3 +11,5 @@ Here are the steps:
 3. Create a new user; we may as well call it "thtruescore" too. Remember to give it login access.
 4. Create a ".env" file to tell the server about your new database. See ".env.sample" for an example.
 5. Run "npm run create_tables" to create database tables in your new database.
+6. Create a second database called "test". The automated tests run in this database; it's defined separately so that we can clear it between tests without wiping all your local data.
+7. Give the "thtruescore" user access to this database too.
