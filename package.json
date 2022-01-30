@@ -7,7 +7,9 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "test": "jest",
-    "start": "node index"
+    "start": "node index",
+    "create_tables": "node scripts/create_tables",
+    "drop_tables": "node scripts/drop_tables"
   },
   "repository": {
     "type": "git",
