@@ -1,8 +1,11 @@
 // Defines and exports a pg connection pool with which to make queries.
 
 const config = require('../lib/config');
+const logger = require('../lib/logger');
 
 const pg = require('pg');
+
+logger.info('Starting database pool (%s:%s).', config.postgres_host, config.postgres_port);
 
 const pool = new pg.Pool({
     user: config.postgres_user,
