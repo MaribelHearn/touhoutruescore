@@ -5,15 +5,18 @@
 const config = require('../lib/config');
 const logger = require('../lib/logger');
 
-const pg = require('pg');
+const pgp = require('pg-promise')();
 
 logger.info('Starting database connection pool (%s:%s).', config.postgres_host, config.postgres_port);
 
-const pool = new pg.Pool({
-    user: config.postgres_user,
-    password: config.postgres_pass,
-    host: config.postgres_host,
-    port: config.postgres_post
+const database = pgp({
+    cn: {
+        user: config.postgres_user,
+        password: config.postgres_pass,
+        host: config.postgres_host,
+        port: config.postgres_post,
+        database: config.database
+    }
 });
 
-module.exports = pool;
+module.exports = database;
