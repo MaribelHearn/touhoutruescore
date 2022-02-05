@@ -33,6 +33,7 @@
     "http": "^0.0.1-security",
     "path": "^0.12.7",
     "pg": "^8.7.1",
+    "pg-promise": "^10.11.1",
     "pino": "^7.6.5",
     "point-of-view": "^5.0.0",
     "url": "^0.11.0"
@@ -46,7 +47,11 @@
   },
   "jest": {
     "globalSetup": "./testing/global_setup.js",
-    "setupFiles": ["./testing/setup_files.js"],
-    "setupFilesAfterEnv": ["./testing/setup_files_after_env.js"]
+    "setupFiles": [
+      "./testing/setup_files.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./testing/setup_files_after_env.js"
+    ]
   }
 }

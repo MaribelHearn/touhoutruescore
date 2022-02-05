@@ -3,5 +3,5 @@
 const db = require('../db/db');
 
 afterAll(async () => {
-    await db.end();
+    await db.$pool.end();
 });
