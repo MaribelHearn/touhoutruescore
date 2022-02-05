@@ -26,6 +26,8 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
+        ports:
+          - 5432:5432
 
     strategy:
       matrix:
@@ -44,7 +46,7 @@ jobs:
     - name: Run tests
       run: npm test
       env:
-        PGHOST: postgres
+        PGHOST: localhost
         PGPORT: 5432
         PGUSER: postgres
         PGPASSWORD: postgres
