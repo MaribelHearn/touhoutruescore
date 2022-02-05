@@ -1,5 +1,7 @@
 // Defines and exports a pg connection pool with which to make queries.
 
+'use strict';
+
 const config = require('../lib/config');
 const logger = require('../lib/logger');
 

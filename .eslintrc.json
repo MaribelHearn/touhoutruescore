@@ -1,25 +1,36 @@
 {
     "extends": "eslint:recommended",
-    "plugins": ["jest"],
+    "plugins": [
+        "jest"
+    ],
     "env": {
         "node": true
     },
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
+        "ecmaVersion": "latest"
     },
-
-    "overrides": [{
-        "files": [ "**/*.test.js" ],
-        "env": {
-            "jest/globals": true
+    "overrides": [
+        {
+            "files": [
+                "**/*.test.js"
+            ],
+            "env": {
+                "jest/globals": true
+            }
+        },
+        {
+            "files": [
+                "testing/*.js"
+            ],
+            "env": {
+                "jest/globals": true
+            }
         }
-    },
-    {
-        "files": [ "testing/*.js"],
-        "env": {
-            "jest/globals": true
-        }
+    ],
+    "rules": {
+        "strict": [
+            2,
+            "global"
+        ]
     }
-]
 }
