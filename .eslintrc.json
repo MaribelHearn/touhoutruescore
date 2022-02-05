@@ -14,5 +14,12 @@
         "env": {
             "jest/globals": true
         }
-    }]
+    },
+    {
+        "files": [ "testing/*.js"],
+        "env": {
+            "jest/globals": true
+        }
+    }
+]
 }
