@@ -1,3 +1,5 @@
+'use strict';
+
 const build = require('../../app');
 
 describe('GET /login', () => {

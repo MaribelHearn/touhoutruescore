@@ -1,3 +1,5 @@
+'use strict';
+
 const db = require('../db/db');
 const schema = require('../db/schema');
 const logger = require('../lib/logger');
